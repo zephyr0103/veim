@@ -1,11 +1,33 @@
-import Article from "./article"   //文件列表
-import ArticleEdit from "./article/Edit" //文件编辑
-import Dashboard from "./dashboard"  //仪表盘
-import Login from "./login" //登录
-import Notfound from "./notfound" //404
-import Settings from "./settings" //设置
+import Loadable from 'react-loadable';
+import Loading from '../components/loading';
+//需要将对外的普通组件需要进行懒加载
+const Article = Loadable({
+    loader: () => import('./article'),
+    loading: Loading,
+});
+const Dashboard = Loadable({
+    loader: () => import('./dashboard'),
+    loading: Loading,
+});
+const ArticleEdit = Loadable({
+    loader: () => import('./article/Edit'),
+    loading: Loading,
+});
+const Login = Loadable({
+    loader: () => import('./login'),
+    loading: Loading,
+});
+const Notfound = Loadable({
+    loader: () => import('./notfound'),
+    loading: Loading,
+});
+const Settings = Loadable({
+    loader: () => import('./settings'),
+    loading: Loading,
+});
 
-export{
+
+export  {
     Article,
     ArticleEdit,
     Dashboard,

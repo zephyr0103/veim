@@ -23,7 +23,7 @@ export const mainRoute = [
 export const admainRoute = [
     {
         pathname:"/admin/dashdoard",
-        component:Dashboard
+        component:Dashboard,
     },
     {
         pathname:"/admin/article",
@@ -32,11 +32,11 @@ export const admainRoute = [
     },
     {
         pathname:"/admin/article/edit/:id",
-        component:ArticleEdit
+        component:ArticleEdit,
     },
     {
         pathname:"/admin/settings",
-        component:Settings
+        component:Settings,
     },
 ]
 
